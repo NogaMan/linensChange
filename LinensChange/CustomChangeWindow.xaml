@@ -1,0 +1,32 @@
+﻿<Window x:Class="LinensChange.CustomChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Индивидуальная смена" Height="180" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <GroupBox Header="Постельное белье" Margin="5">
+            <StackPanel>
+                <CheckBox Name="checkBoxPros" Content="Простыня" Margin="5"/>
+                <CheckBox Name="checkBoxPodo" Content="Пододеяльник" Margin="5"/>
+                <CheckBox Name="checkBoxNavo" Content="Наволочка" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Полотенца" Margin="5" Grid.Column="1">
+            <StackPanel>
+                <CheckBox Name="checkBoxSmallTowel" Content="Малое" Margin="5"/>
+                <CheckBox Name="checkBoxLargeTowel" Content="Большое" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+        
+        <Button Name="btnOK" Content="OK" Grid.Row="1" Margin="5" Click="btnOK_Click"/>
+        <Button Name="btnCancel" Content="Отмена" Grid.Row="1" Grid.Column="1" Margin="5" Click="btnCancel_Click"/>
+    </Grid>
+</Window>
